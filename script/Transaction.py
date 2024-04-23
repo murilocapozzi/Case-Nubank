@@ -1,29 +1,29 @@
-from datetime import datetime
+import datetime
 
 class Transaction:
     def __init__(self, merchant, amount, time):
-        self.merchant = merchant
-        self.amount = amount
-        self.time = time
+        self.__merchant__ = merchant
+        self.__amount__ = amount
+        self.__time__ = time
 
     def getMerchant(self):
-        return self.merchant
+        return self.__merchant__
     
     def setMerchant(self, newMerchant):
-        self.merchant = newMerchant
+        self.__merchant__ = newMerchant
 
     def getAmount(self):
-        return self.amount
+        return self.__amount__
     
     #def setAmount(self, newAmount):
-    #    self.amount = newAmount
+    #    self.__amount__ = newAmount
 
     def getTime(self):
-        return self.time
+        return self.__time__
     
     def setTime(self, newTime):
-        self.time = newTime
+        self.__time__ = newTime
 
     def toString(self):
-        time = self.time.strftime("%d/%m/%Y %H:%M:%S")
-        return (f'({time}) {self.merchant}: ${self.amount}')
+        time = self.__time__.strftime("%d/%m/%Y %H:%M:%S")
+        return (f'({time}) {self.__merchant__}: ${self.__amount__}')
